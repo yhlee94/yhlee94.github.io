@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lee Yonghyun - Backend Developer</title>
+    <meta content="Portfolio of Lee Yonghyun, Java Spring Backend Developer" name="description"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-light": "#3b82f6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1a2234",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(16, 22, 34, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .project-card:hover .project-overlay { opacity: 1; }
+        .text-glow { text-shadow: 0 0 20px rgba(19, 91, 236, 0.5); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-white">
+
+<!-- Sticky Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800/60 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a class="text-xl font-bold tracking-tight" href="#">
+                    <span class="text-primary">&lt;</span>YH<span class="text-primary">/&gt;</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#home">Home</a>
+                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#skills">Skills</a>
+                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#projects">Projects</a>
+                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#experience">Experience</a>
+                <a class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors shadow-lg shadow-primary/25" href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center md:hidden">
+                <button class="text-slate-400 hover:text-white focus:outline-none" type="button">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="home">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-6">
+                        <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                        Open to opportunities
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+                        안녕하세요,<br/>이용현입니다.<br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Backend Developer.</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Java Spring Framework 기반의 백엔드 개발자로, 국제 아동후원단체 한국컴패션에서 웹/앱 플랫폼 및 LMS 시스템을 개발·운영하고 있습니다. 안정적인 시스템 설계와 꼼꼼한 디버깅을 중시합니다.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a class="px-8 py-4 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/25 text-center" href="#projects">
+                            프로젝트 보기
+                        </a>
+                        <a class="px-8 py-4 text-base font-medium rounded-lg text-slate-700 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 text-center" href="#contact">
+                            연락하기
+                        </a>
+                    </div>
+                    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800/60 flex justify-center lg:justify-start gap-8 sm:gap-12">
+                        <div>
+                            <p class="text-3xl font-bold text-white">3+</p>
+                            <p class="text-sm text-slate-400">Years Experience</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">29</p>
+                            <p class="text-sm text-slate-400">Countries Served</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">∞</p>
+                            <p class="text-sm text-slate-400">Lines of Code</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Code Card -->
+                <div class="lg:col-span-5 mt-12 lg:mt-0 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-surface-dark group p-8">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10"></div>
+                        <div class="relative z-20">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-2 text-xs text-slate-500 font-mono">Developer.java</span>
+                            </div>
+                            <code class="text-sm font-mono text-slate-300 leading-relaxed block">
+                                <span class="text-purple-400">public class</span> <span class="text-yellow-300">Developer</span> {<br/>
+                                &nbsp;&nbsp;<span class="text-purple-400">private</span> String name = <span class="text-green-400">"이용현"</span>;<br/>
+                                &nbsp;&nbsp;<span class="text-purple-400">private</span> String role = <span class="text-green-400">"Backend Dev"</span>;<br/>
+                                &nbsp;&nbsp;<span class="text-purple-400">private</span> String company = <span class="text-green-400">"한국컴패션"</span>;<br/><br/>
+                                &nbsp;&nbsp;<span class="text-blue-400">String[]</span> skills = {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Java"</span>, <span class="text-green-400">"Spring"</span>,<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"JS"</span>, <span class="text-green-400">"MSSQL"</span><br/>
+                                &nbsp;&nbsp;};<br/>
+                                }
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="skills">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">기술 스택</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500 dark:text-slate-400">
+                    현업에서 사용하는 기술들입니다.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Backend -->
+                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6 text-green-600 dark:text-green-400">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-java text-orange-500"></i> Java
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fas fa-leaf text-green-500"></i> Spring Framework
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fas fa-cat text-yellow-500"></i> Apache Tomcat
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fas fa-code text-blue-400"></i> MyBatis
+          </span>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
+                        <i class="fas fa-desktop text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-html5 text-orange-500"></i> JSP
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-js text-yellow-400"></i> JavaScript
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-js text-blue-400"></i> jQuery
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-css3-alt text-blue-500"></i> CSS3
+          </span>
+                    </div>
+                </div>
+                <!-- DB & Tools -->
+                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400">
+                        <i class="fas fa-toolbox text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">DB & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fas fa-database text-red-400"></i> MS SQL Server
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-salesforce text-blue-500"></i> Salesforce API
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fab fa-git-alt text-orange-600"></i> Git
+          </span>
+                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+            <i class="fas fa-robot text-purple-400"></i> AI Integration
+          </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 relative" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-end mb-12">
+                <div class="text-left">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">주요 프로젝트</h2>
+                    <p class="mt-4 text-xl text-slate-500 dark:text-slate-400">
+                        개발 및 운영에 참여한 프로젝트들입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-primary/30 to-purple-600/30 flex items-center justify-center">
+                        <i class="fas fa-heart text-6xl text-white/30"></i>
+                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                            <div class="flex gap-4">
+                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">후원 웹 플랫폼</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                            한국컴패션 공식 후원자 웹 플랫폼 개발 및 유지보수. Salesforce API 연동, 결제 시스템(KakaoPay, CMS), AI 편지 작성 기능 구현.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java Spring</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">JSP</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Salesforce</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-green-600/30 to-teal-600/30 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-6xl text-white/30"></i>
+                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                            <div class="flex gap-4">
+                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">Campus LMS 시스템</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                            교육 관리 시스템 개발. 레슨별 차별화 기능, 교사 성장 노트, 학습 리포트 등 교육 플랫폼 전반 개발 및 SQL 최적화.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java Spring</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MyBatis</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MS SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-white/30"></i>
+                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                            <div class="flex gap-4">
+                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">AI 편지 작성 기능</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                            키워드 선택 기반 AI 자동 편지 생성 및 다국어 번역 기능 구현. 관리자 대시보드 및 로그 보안 마스킹 시스템 개발.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">AI API</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Log4j2</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Spring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="experience">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">경력</h2>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-building text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Backend Developer</h3>
+                            <p class="text-primary font-medium">한국컴패션 (Compassion Korea)</p>
+                            <p class="text-slate-400 text-sm mb-4">서울 · 현재 재직 중</p>
+                            <ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> 후원자 웹/앱 플랫폼 개발 및 유지보수 (29개국 대상)</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> Campus LMS 시스템 개발</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> Salesforce API 연동 및 결제 시스템 개발</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> AI 기반 편지 작성 기능 구현</li>
+                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> 로그 보안 및 서버 배포 자동화</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="bg-surface-dark border-t border-slate-800" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">함께 일해요.</h2>
+                    <p class="text-lg text-slate-400 mb-8 max-w-lg">
+                        새로운 기회나 협업에 열려 있습니다. 언제든지 편하게 연락 주세요!
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="px-6 py-3 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25" href="mailto:yhlee94@example.com">
+                            이메일 보내기
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 md:items-end">
+                    <div class="flex space-x-6">
+                        <a class="text-slate-400 hover:text-white transition-colors" href="https://github.com/yhlee94">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a class="text-slate-400 hover:text-blue-400 transition-colors" href="#">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-500 text-sm text-right">
+                        © 2026 Lee Yonghyun. All rights reserved.<br/>
+                        Designed with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind CSS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
