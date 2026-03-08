@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>점심해적단 - 프로젝트 상세</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-light": "#3b82f6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1a2234",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(16, 22, 34, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-white">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-primary transition-colors flex items-center gap-2" href="index.html">
+                    <i class="fas fa-arrow-left text-sm"></i> 홈으로 돌아가기
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors shadow-lg shadow-primary/25" href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="mb-16">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 text-yellow-500 mb-6">
+                <i class="fas fa-utensils text-3xl"></i>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">점심해적단</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                기획 의도 :<br>
+                직장인들의 매일 반복되는 고민인 "오늘 누구와 무엇을 먹을까?"에 대한 문제를 해결하고,
+                팀/부서를 넘어 사내 네트워킹을 활성화하기 위해 기획되었습니다.
+                단순 웹사이트가 아닌 PC 데스크톱 앱(.exe)으로 배포하여 직장인들의 접근성을 극대화했습니다.            </p>
+        </div>
+
+        <!-- Key Points -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <i class="fas fa-lightbulb text-yellow-500"></i> 핵심 포인트
+            </h2>
+            <div class="space-y-6">
+                <!-- Point 1 -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                        1. 실제 유저(회사 동료)의 문제를 해결하기 위한 서비스 기획
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        단순 토이 프로젝트가 아닌, 사내 동료들이 겪는 실제 불편함(점심 메이트 구하기)을 캐치하고 이를 해결하기 위해 기획부터 배포까지 완성한 프로젝트입니다.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                        2. 직장인 타겟에 맞춘 데스크톱 앱(Electron) 배포 전략
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        직장인들은 업무 중 별도의 웹 브라우저 탭을 열어두는 것보다 백그라운드나 트레이(Tray)에서 작동하는 앱의 접근성이 더 좋다고 판단했습니다. 이에 React와 Electron을 결합하여 Windows 환경에서 바로 실행 가능한 Portable .exe 형태의 데스크톱 앱으로 패키징 및 배포했습니다.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                        3. 인프라 (NeonDB + Render) 도입 및 운영 비용 최적화
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">
+                        사이드 프로젝트 특성상 인프라 운영 비용과 관리 리소스를 최소화해야 했습니다. 이에 빠르고 유연하게 스케일링되는 서버리스 데이터베이스인 NeonDB와 백엔드 호스팅 서비스인 Render를 조합하여, 초기 구축 비용 없이 안정적인 서버 운영 환경을 구성했습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Examples -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <i class="fas fa-desktop text-primary"></i> 프로젝트 예시
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Example 1: Login -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                    <div class="aspect-video bg-slate-100 dark:bg-[#111827] flex items-center justify-center relative group">
+                        <!-- Placeholder for Image/GIF -->
+                        <div class="text-slate-400 flex flex-col items-center p-4 text-center">
+                            <i class="fas fa-image text-4xl mb-3 text-slate-300 dark:text-slate-600"></i>
+                            <span class="text-sm font-medium">로그인 화면<br/>이미지/GIF 추가 예정</span>
+                        </div>
+                        <!-- Add Actual Image here -->
+                        <!-- <img src="assets/lunch/login.gif" alt="로그인 화면" class="absolute inset-0 w-full h-full object-cover"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">로그인 및 인증</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                            사내 이메일 인증 기능과 보안이 강화된 JWT 토큰 기반의 로그인 환경을 제공합니다. 메일 발송에는 Nodemailer를 사용하여 비밀번호 찾기 및 가입 인증을 처리했습니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">JWT 인증</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Nodemailer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2: Lobby/Main -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                    <div class="aspect-video bg-slate-100 dark:bg-[#111827] flex items-center justify-center relative group">
+                        <!-- Placeholder for Image/GIF -->
+                        <div class="text-slate-400 flex flex-col items-center p-4 text-center">
+                            <i class="fas fa-image text-4xl mb-3 text-slate-300 dark:text-slate-600"></i>
+                            <span class="text-sm font-medium">메인 로비 화면<br/>이미지/GIF 추가 예정</span>
+                        </div>
+                        <!-- Add Actual Image here -->
+                        <!-- <img src="assets/lunch/lobby.gif" alt="로비 화면" class="absolute inset-0 w-full h-full object-cover"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">실시간 파티 매칭 & 로비</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
+                            Socket.IO를 통해 방 생성, 참여 인원 변동, 팀 채팅이 즉각적으로 모든 접속자에게 동기화됩니다. 실시간 데스크톱 알림을 연동하여 새로운 파티 생성 시 사용자에게 알려줍니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Socket.IO</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Electron 윈도우 알림</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<footer class="bg-surface-dark border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <p class="text-slate-500 text-sm">
+            © 2026 Lee Yonghyun. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

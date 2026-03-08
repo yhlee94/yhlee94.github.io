@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>단백질 체크 - 프로젝트 상세</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-light": "#3b82f6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1a2234",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(16, 22, 34, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-white">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a class="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-primary transition-colors flex items-center gap-2" href="index.html">
+                    <i class="fas fa-arrow-left text-sm"></i> 홈으로 돌아가기
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="mb-16">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 text-cyan-500 mb-6">
+                <i class="fas fa-dumbbell text-3xl"></i>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">단백질 체크</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                운동인을 위한 하루 단백질 및 영양소 섭취량 기록 애플리케이션입니다. 직관적인 UI를 통해 식단을 손쉽게 기록하고, 목표 달성률을 시각화하여 건강 관리에 도움을 줍니다.
+            </p>
+            <div class="flex gap-4">
+                <a href="https://github.com/yhlee94" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-lg text-slate-700 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                    <i class="fab fa-github text-lg"></i> GitHub 저장소
+                </a>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                <i class="fas fa-code text-primary"></i> 주요 기술 스택
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Stack Item -->
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+                    <i class="fab fa-react text-blue-400 text-3xl mt-1"></i>
+                    <div>
+                        <strong class="text-lg text-slate-900 dark:text-slate-200 block mb-1">React Native</strong>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">크로스 플랫폼 모바일 애플리케이션 개발. iOS 및 Android 동시 지원.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+                    <i class="fas fa-fire text-orange-500 text-3xl mt-1"></i>
+                    <div>
+                        <strong class="text-lg text-slate-900 dark:text-slate-200 block mb-1">Firebase</strong>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">사용자 인증(Authentication) 및 백엔드 서비스 연동으로 데이터 실시간 동기화 개발.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex items-start gap-4">
+                    <i class="fas fa-project-diagram text-purple-500 text-3xl mt-1"></i>
+                    <div>
+                        <strong class="text-lg text-slate-900 dark:text-slate-200 block mb-1">Redux</strong>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">전역 상태 관리를 통해 복잡한 컴포넌트 간 데이터 상태를 효율적으로 관리.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<footer class="bg-surface-dark border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <p class="text-slate-500 text-sm">
+            © 2026 Lee Yonghyun. All rights reserved.
+        </p>
+    </div>
+</footer>
+</body></html>

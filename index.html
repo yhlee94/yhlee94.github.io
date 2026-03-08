@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html class="dark" lang="ko">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Lee Yonghyun - Backend Developer</title>
-    <meta content="Portfolio of Lee Yonghyun, Java Spring Backend Developer" name="description"/>
+    <meta content="Portfolio of Lee Yonghyun, Java Spring Backend Developer" name="description" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -21,7 +23,7 @@
                         "surface-dark": "#1a2234",
                     },
                     fontFamily: { "display": ["Inter", "sans-serif"] },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
@@ -32,93 +34,126 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        .project-card:hover .project-overlay { opacity: 1; }
-        .text-glow { text-shadow: 0 0 20px rgba(19, 91, 236, 0.5); }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(19, 91, 236, 0.5);
+        }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-white">
 
-<!-- Sticky Navigation -->
-<nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800/60 transition-colors duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-            <div class="flex-shrink-0 flex items-center">
-                <a class="text-xl font-bold tracking-tight" href="#">
-                    <span class="text-primary">&lt;</span>YH<span class="text-primary">/&gt;</span>
-                </a>
-            </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#home">Home</a>
-                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#skills">Skills</a>
-                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#projects">Projects</a>
-                <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#experience">Experience</a>
-                <a class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors shadow-lg shadow-primary/25" href="#contact">Contact</a>
-            </div>
-            <div class="flex items-center md:hidden">
-                <button class="text-slate-400 hover:text-white focus:outline-none" type="button">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
-                </button>
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 dark:border-slate-800/60 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a class="text-xl font-bold tracking-tight" href="#">
+                        <span class="text-primary">&lt;</span>YH<span class="text-primary">/&gt;</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#home">Home</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#skills">Skills</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#projects">Projects</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#personal">Personal</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#experience">Experience</a>
+                    <a class="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors shadow-lg shadow-primary/25"
+                        href="#contact">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button class="text-slate-400 hover:text-white focus:outline-none" type="button">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<main>
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="home">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-6">
-                        <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
-                        Open to opportunities
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
-                        안녕하세요,<br/>이용현입니다.<br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Backend Developer.</span>
-                    </h1>
-                    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Java Spring Framework 기반의 백엔드 개발자로, 국제 아동후원단체 한국컴패션에서 웹/앱 플랫폼 및 LMS 시스템을 개발·운영하고 있습니다. 안정적인 시스템 설계와 꼼꼼한 디버깅을 중시합니다.
-                    </p>
-                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a class="px-8 py-4 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/25 text-center" href="#projects">
-                            프로젝트 보기
-                        </a>
-                        <a class="px-8 py-4 text-base font-medium rounded-lg text-slate-700 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 text-center" href="#contact">
-                            연락하기
-                        </a>
-                    </div>
-                    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800/60 flex justify-center lg:justify-start gap-8 sm:gap-12">
-                        <div>
-                            <p class="text-3xl font-bold text-white">3+</p>
-                            <p class="text-sm text-slate-400">Years Experience</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="home">
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl opacity-30 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-3xl opacity-20 pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div
+                            class="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-6">
+                            <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                            Open to opportunities
                         </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">29</p>
-                            <p class="text-sm text-slate-400">Countries Served</p>
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+                            안녕하세요,<br />이용현입니다.<br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Backend
+                                Developer.</span>
+                        </h1>
+                        <p
+                            class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Java Spring Framework 기반의 백엔드 개발자로, 국제 아동후원단체 한국컴패션에서 웹/앱 플랫폼 및 LMS 시스템을 개발·운영하고 있습니다. 안정적인
+                            시스템 설계와 꼼꼼한 디버깅을 중시합니다.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a class="px-8 py-4 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/25 text-center"
+                                href="#projects">
+                                프로젝트 보기
+                            </a>
+                            <a class="px-8 py-4 text-base font-medium rounded-lg text-slate-700 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 md:text-lg md:px-10 transition-all transform hover:-translate-y-1 text-center"
+                                href="#contact">
+                                연락하기
+                            </a>
                         </div>
-                        <div>
-                            <p class="text-3xl font-bold text-white">∞</p>
-                            <p class="text-sm text-slate-400">Lines of Code</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hero Code Card -->
-                <div class="lg:col-span-5 mt-12 lg:mt-0 relative">
-                    <div class="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-surface-dark group p-8">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10"></div>
-                        <div class="relative z-20">
-                            <div class="flex items-center space-x-2 mb-4">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                <span class="ml-2 text-xs text-slate-500 font-mono">Developer.java</span>
+                        <div
+                            class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800/60 flex justify-center lg:justify-start gap-8 sm:gap-12">
+                            <div>
+                                <p class="text-3xl font-bold text-white">3+</p>
+                                <p class="text-sm text-slate-400">Years Experience</p>
                             </div>
-                            <code class="text-sm font-mono text-slate-300 leading-relaxed block">
+                            <div>
+                                <p class="text-3xl font-bold text-white">29</p>
+                                <p class="text-sm text-slate-400">Countries Served</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">∞</p>
+                                <p class="text-sm text-slate-400">Lines of Code</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero Code Card -->
+                    <div class="lg:col-span-5 mt-12 lg:mt-0 relative">
+                        <div
+                            class="relative rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-surface-dark group p-8">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10">
+                            </div>
+                            <div class="relative z-20">
+                                <div class="flex items-center space-x-2 mb-4">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <span class="ml-2 text-xs text-slate-500 font-mono">Developer.java</span>
+                                </div>
+                                <code class="text-sm font-mono text-slate-300 leading-relaxed block">
                                 <span class="text-purple-400">public class</span> <span class="text-yellow-300">Developer</span> {<br/>
                                 &nbsp;&nbsp;<span class="text-purple-400">private</span> String name = <span class="text-green-400">"이용현"</span>;<br/>
                                 &nbsp;&nbsp;<span class="text-purple-400">private</span> String role = <span class="text-green-400">"Backend Dev"</span>;<br/>
@@ -129,240 +164,560 @@
                                 &nbsp;&nbsp;};<br/>
                                 }
                             </code>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="skills">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">기술 스택</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500 dark:text-slate-400">
-                    현업에서 사용하는 기술들입니다.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Backend -->
-                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
-                    <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6 text-green-600 dark:text-green-400">
-                        <i class="fas fa-server text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Backend</h3>
-                    <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-java text-orange-500"></i> Java
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fas fa-leaf text-green-500"></i> Spring Framework
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fas fa-cat text-yellow-500"></i> Apache Tomcat
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fas fa-code text-blue-400"></i> MyBatis
-          </span>
-                    </div>
-                </div>
-                <!-- Frontend -->
-                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
-                    <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
-                        <i class="fas fa-desktop text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Frontend</h3>
-                    <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-html5 text-orange-500"></i> JSP
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-js text-yellow-400"></i> JavaScript
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-js text-blue-400"></i> jQuery
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-css3-alt text-blue-500"></i> CSS3
-          </span>
-                    </div>
-                </div>
-                <!-- DB & Tools -->
-                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
-                    <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400">
-                        <i class="fas fa-toolbox text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">DB & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fas fa-database text-red-400"></i> MS SQL Server
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-salesforce text-blue-500"></i> Salesforce API
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fab fa-git-alt text-orange-600"></i> Git
-          </span>
-                        <span class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
-            <i class="fas fa-robot text-purple-400"></i> AI Integration
-          </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="py-20 relative" id="projects">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row justify-between items-end mb-12">
-                <div class="text-left">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">주요 프로젝트</h2>
-                    <p class="mt-4 text-xl text-slate-500 dark:text-slate-400">
-                        개발 및 운영에 참여한 프로젝트들입니다.
+        <!-- Skills Section -->
+        <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="skills">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">기술 스택</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500 dark:text-slate-400">
+                        현업에서 사용한 기술들입니다.
                     </p>
                 </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Frontend -->
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400">
+                            <i class="fas fa-desktop text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Frontend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-react text-blue-400"></i> React
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-vuejs text-emerald-400"></i> Vue.js
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-js text-yellow-400"></i> JavaScript
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-wind text-cyan-400"></i> Tailwind CSS
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-html5 text-orange-500"></i> HTML5/JSP
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-css3-alt text-blue-500"></i> CSS3
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-bootstrap text-purple-500"></i> Bootstrap
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-js text-blue-400"></i> jQuery
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-desktop text-slate-400"></i> Electron
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6 text-green-600 dark:text-green-400">
+                            <i class="fas fa-server text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Backend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-java text-orange-500"></i> Java
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-leaf text-green-500"></i> Spring Boot
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-node-js text-green-500"></i> Node.js
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-code text-blue-400"></i> MyBatis
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-plug text-slate-500 text-sm"></i> JDBC
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-database text-blue-500"></i> JPA
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-network-wired text-purple-500"></i> RESTful API
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- DB & Tools -->
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6 text-purple-600 dark:text-purple-400">
+                            <i class="fas fa-toolbox text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">DB & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-database text-blue-500"></i> PostgreSQL
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-database text-orange-400"></i> MySQL
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-database text-red-400"></i> MS SQL Server
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-layer-group text-red-500"></i> Redis
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-git-alt text-orange-600"></i> Git
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fab fa-jenkins text-slate-700 dark:text-slate-300"></i> Jenkins
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-magic text-blue-500"></i> Cursor AI
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-brain text-orange-400"></i> Claude
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-rocket text-purple-500"></i> Antigravity
+                            </span>
+                            <span
+                                class="px-3 py-1 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                                <i class="fas fa-sparkles text-blue-400"></i> Gemini
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
-                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-primary/30 to-purple-600/30 flex items-center justify-center">
-                        <i class="fas fa-heart text-6xl text-white/30"></i>
-                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
-                            <div class="flex gap-4">
-                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">후원 웹 플랫폼</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                            한국컴패션 공식 후원자 웹 플랫폼 개발 및 유지보수. Salesforce API 연동, 결제 시스템(KakaoPay, CMS), AI 편지 작성 기능 구현.
+        </section>
+
+        <!-- Projects Section -->
+        <section class="py-20 relative" id="projects">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-between items-end mb-12">
+                    <div class="text-left">
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">주요 프로젝트
+                        </h2>
+                        <p class="mt-4 text-xl text-slate-500 dark:text-slate-400">
+                            개발 및 운영에 참여한 프로젝트들입니다.
                         </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java Spring</span>
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">JSP</span>
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Salesforce</span>
-                        </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
-                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-green-600/30 to-teal-600/30 flex items-center justify-center">
-                        <i class="fas fa-graduation-cap text-6xl text-white/30"></i>
-                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
-                            <div class="flex gap-4">
-                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div
+                        class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                        <div class="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
+                            <img src="assets/hi.png" alt="경기도교육청 하이러닝" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-1">
+                                경기도교육청 하이러닝<br/>교육지원 통합 플랫폼
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 font-medium mb-2">고도화 및 유지보수</p>
+                            <p class="text-primary font-medium text-xs mb-3">경기도교육청(KT) · 2023.11 ~ 2024.12</p>
+                            <div class="text-slate-600 dark:text-slate-400 text-sm mb-4 space-y-1">
+                                <p class="flex items-start gap-1.5"><i class="fas fa-check text-primary mt-1 text-[10px] flex-shrink-0"></i> <span><strong>Batch 프로세스</strong>를 활용한 대용량 데이터 기반 <strong>학습자 랭킹 시스템</strong> 구축 및 고도화</span></p>
+                                <p class="flex items-start gap-1.5"><i class="fas fa-check text-primary mt-1 text-[10px] flex-shrink-0"></i> <span>학습 보상 및 학생 감정 상태 분석을 위한 <strong>학습경영도구</strong> 로직 개발</span></p>
+                                <p class="flex items-start gap-1.5"><i class="fas fa-check text-primary mt-1 text-[10px] flex-shrink-0"></i> <span><strong>Spring AOP</strong> 기반 선언적 트랜잭션 관리를 통한 <strong>콘텐츠 공유 기능</strong> 및 로직 고도화</span></p>
+                                <p class="flex items-start gap-1.5"><i class="fas fa-check text-primary mt-1 text-[10px] flex-shrink-0"></i> <span><strong>Session 검증</strong> 및 <strong>RSA 비대칭키 암호화</strong>를 적용하여 <strong>파라미터 변조 방지</strong> 및 인프라 보안 강화</span></p>
+                                <p class="flex items-start gap-1.5"><i class="fas fa-check text-primary mt-1 text-[10px] flex-shrink-0"></i> <span><strong>SIGNAL 분석</strong> 및 쿼리 튜닝을 통한 <strong>DB Lock 현상 해소</strong> 및 시스템 안정화</span></p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">Campus LMS 시스템</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                            교육 관리 시스템 개발. 레슨별 차별화 기능, 교사 성장 노트, 학습 리포트 등 교육 플랫폼 전반 개발 및 SQL 최적화.
-                        </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java Spring</span>
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MyBatis</span>
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MS SQL</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
-                    <div class="relative h-48 overflow-hidden bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center">
-                        <i class="fas fa-robot text-6xl text-white/30"></i>
-                        <div class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
-                            <div class="flex gap-4">
-                                <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors" href="https://github.com/yhlee94" title="View Code">
-                                    <i class="fab fa-github text-lg"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">AI 편지 작성 기능</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                            키워드 선택 기반 AI 자동 편지 생성 및 다국어 번역 기능 구현. 관리자 대시보드 및 로그 보안 마스킹 시스템 개발.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">AI API</span>
-                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Log4j2</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java</span>
                             <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Spring</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Vue.js</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">JavaScript</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MyBatis</span>
+                            <span class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">PostgreSQL</span>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div
+                        class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-green-600/30 to-teal-600/30 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-6xl text-white/30"></i>
+                            <div
+                                class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                                <div class="flex gap-4">
+                                    <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="https://github.com/yhlee94" title="View Code">
+                                        <i class="fab fa-github text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">
+                                Campus LMS 시스템</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                교육 관리 시스템 개발. 레슨별 차별화 기능, 교사 성장 노트, 학습 리포트 등 교육 플랫폼 전반 개발 및 SQL 최적화.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Java
+                                    Spring</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MyBatis</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">MS
+                                    SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div
+                        class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card">
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center">
+                            <i class="fas fa-robot text-6xl text-white/30"></i>
+                            <div
+                                class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                                <div class="flex gap-4">
+                                    <a class="p-3 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="https://github.com/yhlee94" title="View Code">
+                                        <i class="fab fa-github text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">
+                                AI 편지 작성 기능</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                키워드 선택 기반 AI 자동 편지 생성 및 다국어 번역 기능 구현. 관리자 대시보드 및 로그 보안 마스킹 시스템 개발.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">AI
+                                    API</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Log4j2</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Spring</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="experience">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">경력</h2>
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-building text-primary text-xl"></i>
+        <!-- Personal Projects Section -->
+        <section class="py-20 bg-slate-50 dark:bg-[#151c2c]" id="personal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-between items-end mb-12">
+                    <div class="text-left">
+                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">사이드
+                            프로젝트 </h2>
+                        <p class="mt-4 text-xl text-slate-500 dark:text-slate-400">
+                            개인적으로 진행한 다양한 사이드 프로젝트들입니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Side Project 1 -->
+                    <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card cursor-pointer"
+                        onclick="window.location.href='project-lunch.html'">
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-yellow-600/30 to-orange-600/30 flex items-center justify-center">
+                            <i class="fas fa-utensils text-6xl text-white/30"></i>
+                            <div
+                                class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                                <div class="flex gap-4">
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="project-lunch.html" title="상세 페이지 보기"
+                                        onclick="event.stopPropagation(); window.location.href='project-lunch.html';">
+                                        <i class="fas fa-info text-lg"></i>
+                                    </a>
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="https://github.com/yhlee94" target="_blank" title="View Code"
+                                        onclick="event.stopPropagation()">
+                                        <i class="fab fa-github text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Backend Developer</h3>
-                            <p class="text-primary font-medium">한국컴패션 (Compassion Korea)</p>
-                            <p class="text-slate-400 text-sm mb-4">서울 · 현재 재직 중</p>
-                            <ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
-                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> 후원자 웹/앱 플랫폼 개발 및 유지보수 (29개국 대상)</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> Campus LMS 시스템 개발</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> Salesforce API 연동 및 결제 시스템 개발</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> AI 기반 편지 작성 기능 구현</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> 로그 보안 및 서버 배포 자동화</li>
-                            </ul>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">
+                                점심해적단</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                직장인들을 위한 점심 메뉴 추천 및 맛집 공유 서비스. 위치 기반 주변 맛집 탐색 및 팀원 간 투표 기능 구현.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">React</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Electron</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Node.js</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Socket.IO</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">NeonDB(PostgreSQL)</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Render</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side Project 2 -->
+                    <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card cursor-pointer"
+                        onclick="window.location.href='project-protein.html'">
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-blue-600/30 to-cyan-600/30 flex items-center justify-center">
+                            <i class="fas fa-dumbbell text-6xl text-white/30"></i>
+                            <div
+                                class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                                <div class="flex gap-4">
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="project-protein.html" title="상세 페이지 보기"
+                                        onclick="event.stopPropagation(); window.location.href='project-protein.html';">
+                                        <i class="fas fa-info text-lg"></i>
+                                    </a>
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="https://github.com/yhlee94" target="_blank" title="View Code"
+                                        onclick="event.stopPropagation()">
+                                        <i class="fab fa-github text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">
+                                단백질 체크</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                운동인을 위한 하루 단백질 및 영양소 섭취량 기록 애플리케이션. 식단 분석 및 목표 달성률 시각화 대시보드.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">React
+                                    Native</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Firebase</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Redux</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side Project 3 -->
+                    <div class="group relative rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 project-card cursor-pointer"
+                        onclick="window.location.href='project-messenger.html'">
+                        <div
+                            class="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-600/30 to-blue-600/30 flex items-center justify-center">
+                            <i class="fas fa-comments text-6xl text-white/30"></i>
+                            <div
+                                class="absolute inset-0 bg-slate-900/80 flex items-center justify-center opacity-0 project-overlay transition-opacity duration-300">
+                                <div class="flex gap-4">
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="project-messenger.html" title="상세 페이지 보기"
+                                        onclick="event.stopPropagation(); window.location.href='project-messenger.html';">
+                                        <i class="fas fa-info text-lg"></i>
+                                    </a>
+                                    <a class="flex items-center justify-center w-12 h-12 bg-white text-slate-900 rounded-full hover:bg-primary hover:text-white transition-colors"
+                                        href="https://github.com/yhlee94" target="_blank" title="View Code"
+                                        onclick="event.stopPropagation()">
+                                        <i class="fab fa-github text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors mb-2">
+                                메신저 협업툴</h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                팀원 간 실시간 소통과 업무 관리를 위한 협업 커스텀 메신저. 채널 기반 채팅, 파일 공유 및 시스템 알림 구현.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Vue.js</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Spring
+                                    Boot</span>
+                                <span
+                                    class="text-xs font-medium px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">WebSockets</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact / Footer -->
-    <footer class="bg-surface-dark border-t border-slate-800" id="contact">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">함께 일해요.</h2>
-                    <p class="text-lg text-slate-400 mb-8 max-w-lg">
-                        새로운 기회나 협업에 열려 있습니다. 언제든지 편하게 연락 주세요!
-                    </p>
-                    <div class="flex gap-4">
-                        <a class="px-6 py-3 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25" href="mailto:yhlee94@example.com">
-                            이메일 보내기
-                        </a>
-                    </div>
+        <!-- Experience Section -->
+        <section class="py-20 relative" id="experience">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">경력</h2>
                 </div>
-                <div class="flex flex-col gap-6 md:items-end">
-                    <div class="flex space-x-6">
-                        <a class="text-slate-400 hover:text-white transition-colors" href="https://github.com/yhlee94">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a class="text-slate-400 hover:text-blue-400 transition-colors" href="#">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <!-- ATWO International Experience -->
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bullhorn text-yellow-600 dark:text-yellow-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">프로덕트 매니저 (기획/마케팅 · 주임)</h3>
+                                <p class="text-primary font-medium">에이투인터내셔널</p>
+                                <p class="text-slate-400 text-sm mb-4">2019.07 ~ 2022.03 (2년 9개월)</p>
+                                <ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>웹사이트 및 디자인:</strong> 홈페이지 UI/UX 기획 및 HTML/CSS/JS 활용 기능 개선, 상업용/이벤트
+                                            디자인 제작</div>
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>마케팅 및 영업:</strong> SEO 최적화 및 광고/SNS 운영, 온·오프라인 입점 제안 및 60여 개 상품
+                                            전시/판매 관리</div>
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>기획 및 소싱:</strong> 시장 동향 분석 리포트 작성 및 최적 제품 발굴/소싱, 데이터 기반 매출 및 수익 분석
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-500 text-sm text-right">
-                        © 2026 Lee Yonghyun. All rights reserved.<br/>
-                        Designed with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind CSS.
-                    </p>
+
+                    <!-- Funin Experience -->
+                    <div
+                        class="bg-white dark:bg-surface-dark rounded-xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-laptop-code text-green-600 dark:text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">풀스택 / 백엔드 개발자</h3>
+                                <p class="text-primary font-medium">퍼닌 (Funin)</p>
+                                <p class="text-slate-400 text-sm mb-4">2023.11 ~ 재직중 (<span id="funin-duration"></span>)
+                                </p>
+                                <ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>유지보수 (Troubleshooting & Optimization):</strong> 데드락(Deadlock) 등 시스템
+                                            시그널을 통한 오류 추적 및 수정, 쿼리 최적화를 통한 성능 병목 구간 발굴 및 개선</div>
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>서비스 고도화:</strong> 레거시 코드 리팩토링 및 아키텍처 재검토를 통해 서비스 안정성 강화, 신규 비즈니스
+                                            요구사항에 대응하는 기능 고도화 구현</div>
+                                    </li>
+                                    <li class="flex items-start gap-2"><i
+                                            class="fas fa-check text-primary mt-1 flex-shrink-0"></i>
+                                        <div><strong>인프라 및 배포 파이프라인 관리:</strong> 무중단 배포 환경 구축 및 클라우드 인프라(AWS 등) 리소스 최적화를
+                                            통한 효율적인 서버 운영 환경 세팅</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</main>
+        </section>
+
+        <!-- Contact / Footer -->
+        <footer class="bg-surface-dark border-t border-slate-800" id="contact">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">함께 일해요.</h2>
+                        <p class="text-lg text-slate-400 mb-8 max-w-lg">
+                            새로운 기회나 협업에 열려 있습니다. 언제든지 편하게 연락 주세요!
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="px-6 py-3 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25"
+                                href="mailto:yhlee94@example.com">
+                                이메일 보내기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6 md:items-end">
+                        <div class="flex space-x-6">
+                            <a class="text-slate-400 hover:text-white transition-colors"
+                                href="https://github.com/yhlee94">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a class="text-slate-400 hover:text-blue-400 transition-colors" href="#">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                        </div>
+                        <p class="text-slate-500 text-sm text-right">
+                            © 2026 Lee Yonghyun. All rights reserved.<br />
+                            Designed with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind CSS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 퍼닌 (Funin) 경력 계산 (2023년 11월 시작)
+            const startDate = new Date(2023, 10); // 월은 0부터 시작하므로 10이 11월
+            const currentDate = new Date();
+
+            const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth()) + 1;
+            const displayYears = Math.floor(totalMonths / 12);
+            const displayMonths = totalMonths % 12;
+
+            let durationText = '';
+            if (displayYears > 0) durationText += displayYears + '년 ';
+            if (displayMonths > 0) durationText += displayMonths + '개월';
+
+            const funinDurationEl = document.getElementById('funin-duration');
+            if (funinDurationEl) {
+                funinDurationEl.textContent = durationText.trim();
+            }
+        });
+    </script>
 </body>
+
 </html>
